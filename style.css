@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    min-height: 100vh; /* para a altura do container ocupar 100% da tela */
+    font-family: var(--fonte1);
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header h1{
+    padding-top: 50px;
+    font-variant: small-caps; /* Para as letras ficarem maiúsculas, porém a primeiro sempre será maior */
+    font-family: var(--fonte2);
+    font-size: 10vw; /* para ficar 10% de largura comparado ao tamanho de tela, dessa forma a letra vai diminuindo conforme a tela vai diminuindo também  */
+    
+}
+
+header p {
+    padding-bottom: 50px; 
+    font-size: 20px;
+}
+
+header a{
+    color: white;
+    text-decoration: none; /* para tirar o sublinhado do link */
+    font-weight: bolder; /* para ficar em negrito */
+}
+
+header a:hover{
+    text-decoration: underline; /* para aparecer o sublinhado com passar o mouse em cima do link */
+}
+
+section{
+    padding-top: 10vh; /* para o padding-top pegar 10vh da altura do body */
+    padding-bottom: 10vh; /* para o padding-bottom pegar 10vh da altura do body */
+    line-height: 2em; /* espaço entre as frases  */
+    padding-left: 30px; /*  */
+    font-family: var(--fonte3);
+    font-size: 3vw; /* para ficar 3% de largura comparado ao tamanho de tela, dessa forma a letra vai diminuindo conforme a tela vai diminuindo também  */
+}
+
+section > p{
+    padding-bottom: 2em ;
+
+}
+section.normal{
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+section.imagem{
+    background-color: white;
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.44); /* inset (para sombra ser para dentro), 6px 6px, 13px de espalhamento, 0px de ampliação */
+    background-size: cover; /* significa cobrir o section inteira com a imagem, porém, ele não exibe a imagem toda, dependendo do tamanho que estiver o navegador e da uma picotadinha na imagem as vezes */
+    background-attachment: fixed; /* para deixar a imagem fixa dando o efeito Parallax simples */
+}
+
+section.imagem > p{
+    display: inline-block; /* para transformar o section imagem em um bloco */
+    padding: 5px; /* dando 5px de padding no agora então bloco  */
+    background-color: rgba(0, 0, 0, 0.403);
+    text-shadow: 1px 1px 0px black; 
+
+}
+
+section#img01 {
+    background-image: url('imagens/background001.jpg');
+    background-position: right center;
+
+}
+
+section#img02 {
+    background-image: url('imagens/background002.jpg');
+
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+footer p{
+    color: white;
+}
+
+footer a{
+    color: white;
+    text-decoration: none; /* para tirar o sublinhado do link */
+    font-weight: bolder; /* para ficar negrito */
+}
+
+footer a:hover{
+    text-decoration: underline; /* para colocar um sublinhado no link quando passar o mouse */
+}
